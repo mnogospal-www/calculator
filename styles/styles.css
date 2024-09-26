@@ -1,0 +1,75 @@
+:root {
+	--basic-viewpoint-unit: calc(1vh + 1vw);
+	--basic-color: #111111;
+	--secondary-color: #f9f9f9;
+	--primary-color: #f1a326;
+
+	--transition: 0.1s;
+	--button-size: 2.5em;
+	--border-radius: 0em;
+	--border: 0.1em solid transparent;
+}
+
+.app-wrapper {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.calculator {
+		width: calc(var(--button-size) * 4 + 0.25em * 3);
+		display: flex;
+		flex-direction: column;
+		gap: 0.75em;
+
+		.buttons {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.25em;
+		}
+	}
+
+	.output {
+		min-height: 1.75em;
+		font-size: 1.75em;
+		border-radius: calc(var(--border-radius) - 1em);
+		background-color: var(--secondary-color);
+		color: var(--basic-color);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: flex;
+		align-items: center;
+		justify-content: end;
+	}
+}
+
+button {
+	width: var(--button-size);
+	height: var(--button-size);
+	border: var(--border);
+	border-radius: var(--border-radius);
+	background-color: var(--secondary-color);
+	color: var(--basic-color);
+	font-size: 1em;
+	font-weight: 500;
+	cursor: pointer;
+
+	&.calc-button {
+		width: calc(var(--button-size) * 2 + 0.25em);
+		background-color: var(--primary-color);
+		border-radius: var(--border-radius);
+	}
+
+	&.operation,
+	&[data-action='control'] {
+		background-color: var(--primary-color);
+		color: var(--basic-color);
+	}
+
+	&:hover {
+		background-color: transparent;
+		color: var(--primary-color);
+		border-color: var(--primary-color);
+	}
+}

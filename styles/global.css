@@ -1,0 +1,23 @@
+@font-face {
+	font-family: SourceCodePro;
+	src: url(/ttf/SourceCodePro.ttf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: var(--transition);
+}
+
+html {
+	--responsive-font-size: calc(var(--basic-viewpoint-unit) * 1.25);
+
+	font-size: var(--responsive-font-size);
+}
+
+body {
+	font-family: SourceCodePro;
+	background-color: var(--basic-color);
+	color: var(--secondary-color);
+}

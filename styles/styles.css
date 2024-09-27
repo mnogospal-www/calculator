@@ -51,6 +51,7 @@ button {
 	border-radius: var(--border-radius);
 	background-color: var(--secondary-color);
 	color: var(--basic-color);
+	font-family: inherit;
 	font-size: 1em;
 	font-weight: 500;
 	cursor: pointer;
